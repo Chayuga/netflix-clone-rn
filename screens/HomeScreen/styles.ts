@@ -5,18 +5,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
   },
-  image: {
-    width: 100,
-    height: 170,
-    resizeMode: "cover",
-    borderRadius: 10,
-    margin: 5,
-  },
-
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
 });
 
 export default styles;

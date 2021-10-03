@@ -7,24 +7,17 @@ import categories from "../../assets/data/categories";
 import { Image, FlatList } from "react-native";
 import { Text, View } from "../../components/Themed";
 import { RootTabScreenProps } from "../../types";
+import HomeCategory from "../../components/HomeCategory";
 
 const firstCategory = categories.items[0];
 
 const HomeScreen = ({ navigation }: RootTabScreenProps<"Home">) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dummy title</Text>
+      {/* List of categories */}
       <FlatList
-        data={firstCategory.movies}
-        renderItem={({ item }) => (
-          <Image
-            style={styles.image}
-            source={{
-              uri: item.poster,
-            }}
-          />
-        )}
-        horizontal
+        data={categories.items}
+        renderItem={({ item }) => <HomeCategory category={item} />}
       />
     </View>
   );
