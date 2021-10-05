@@ -33,6 +33,15 @@ const movie = {
               plot: "An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.",
               video: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
             },
+            {
+              id: "episode3",
+              title: "3. Walk in the park",
+              poster:
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/ep1.jpg",
+              duration: "43m",
+              plot: "An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.",
+              video: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+            },
           ],
         },
       },
@@ -53,6 +62,24 @@ const movie = {
             {
               id: "episode4",
               title: "2. Are you subscribed?",
+              poster:
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/ep0.jpg",
+              duration: "49m",
+              plot: "An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.",
+              video: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+            },
+            {
+              id: "episode5",
+              title: "3. Let's get things done?",
+              poster:
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/ep0.jpg",
+              duration: "49m",
+              plot: "An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.",
+              video: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+            },
+            {
+              id: "episode6",
+              title: "4. The cage and the Lions",
               poster:
                 "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/ep0.jpg",
               duration: "49m",

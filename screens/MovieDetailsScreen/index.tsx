@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text } from "../../components/Themed";
 import {
   AntDesign,
@@ -13,18 +13,22 @@ import styles from "./styles";
 import movie from "../../assets/data/movie";
 import EpisodeItem from "../../components/EpisodeItem";
 import { FlatList } from "react-native-gesture-handler";
+import { Picker } from "@react-native-picker/picker";
 
 const firstSeason = movie.seasons.items[0];
 const firstEpisode = movie.seasons.items[0].episodes.items[0];
 
 const MovieDetailsScreen = () => {
-  console.log(firstEpisode);
+  const [currentSeason, setCurrentSeason] = useState(firstSeason);
+
+  const seasonNames = movie.seasons.items.map((season) => season.name);
+
   return (
     <View>
       <Image style={styles.image} source={{ uri: firstEpisode.poster }}></Image>
 
       <FlatList
-        data={firstSeason.episodes.items}
+        data={currentSeason.episodes.items}
         renderItem={({ item }) => <EpisodeItem episode={item} />}
         style={{ marginBottom: 250 }}
         ListHeaderComponent={
@@ -85,6 +89,23 @@ const MovieDetailsScreen = () => {
                 <Text style={{ color: "darkgrey", marginTop: 5 }}>Share</Text>
               </View>
             </View>
+
+            <Picker
+              selectedValue={currentSeason.name}
+              onValueChange={(itemValue, itemIndex) => {
+                setCurrentSeason(movie.seasons.items[itemIndex]);
+              }}
+              style={{ color: "white", width: 130, marginTop: 10 }}
+              dropdownIconColor={"white"}
+            >
+              {seasonNames.map((seasonName) => (
+                <Picker.Item
+                  label={seasonName}
+                  value={seasonName}
+                  key={seasonName}
+                />
+              ))}
+            </Picker>
           </View>
         }
       ></FlatList>
