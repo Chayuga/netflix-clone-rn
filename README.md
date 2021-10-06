@@ -1,4 +1,4 @@
-# netflix-clone-rn
+# Workpay Interview task
 
 
 # To start
