@@ -94,7 +94,7 @@ function BottomTabNavigator() {
     >
       <BottomTab.Screen
         name="Home"
-        component={MovieDetailsScreen}
+        component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<"Home">) => ({
           // title: " ",
           tabBarIcon: ({ color }) => (
@@ -106,7 +106,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="Video Library"
-        component={TabTwoScreen}
+        component={MovieDetailsScreen}
         options={{
           title: "Video Library",
           tabBarIcon: ({ color }) => (
@@ -114,7 +114,7 @@ function BottomTabNavigator() {
           ),
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="Search"
         component={TabTwoScreen}
         options={{
@@ -123,8 +123,8 @@ function BottomTabNavigator() {
             <Ionicons name="search" size={24} color={color} />
           ),
         }}
-      />
-      <BottomTab.Screen
+      /> */}
+      {/* <BottomTab.Screen
         name="Downloads"
         component={TabTwoScreen}
         options={{
@@ -133,7 +133,7 @@ function BottomTabNavigator() {
             <AntDesign name="download" color={color} size={24} />
           ),
         }}
-      />
+      /> */}
     </BottomTab.Navigator>
   );
 }
